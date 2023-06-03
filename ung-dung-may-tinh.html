@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <form>
+        <input type="number" id="numberone">
+        <input type="number" id="numbertwo"> <br>
+        <div style="border: 1px; margin-top: 20px;">
+            <button id="btn-1" type="button" onclick="Additison()">Additison(+)</button>
+            <button id="btn-2" type="button" onclick="Subtraction()">Subtraction(-)</button>
+            <button id="btn-3" type="button" onclick="Multiplication()">Multiplication(X)</button>
+            <button id="btn-4" type="button" onclick="Division()">Division(/)</button>
+        </div>
+    </form>
+
+    <script>
+        function Additison() {
+            let a = document.getElementById("numberone").value;
+            let b = document.getElementById("numbertwo").value;
+            let c = parseInt(a) + parseInt(b);
+            document.getElementById('btn-1').innerHTML = "Result Additison: " + c;
+        }
+        function Subtraction() {
+            let a = document.getElementById("numberone").value;
+            let b = document.getElementById("numbertwo").value;
+            let d = parseInt(a) - parseInt(b);
+            document.getElementById('btn-2').innerHTML = "Result Subtraction: " + d;
+        }
+        function Multiplication() {
+            let a = document.getElementById("numberone").value;
+            let b = document.getElementById("numbertwo").value;
+            let e = parseInt(a) * parseInt(b);
+            document.getElementById('btn-3').innerHTML = "Result Multiplication: " + e;
+        }
+        function Division() {
+            let a = document.getElementById("numberone").value;
+            let b = document.getElementById("numbertwo").value;
+            let f = parseInt(a) / parseInt(b);
+            document.getElementById('btn-4').innerHTML = "Result Division: " + f;
+        }
+
+    </script>
+</body>
+
+</html>
