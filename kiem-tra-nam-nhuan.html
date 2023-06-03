@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kiểm tra năm nhuận</h1>
+    <input type="number" id="year" placeholder="Nhập vào năm cần kiểm tra">
+    <button type="button" id="btn" onclick="NamNhuan()">Kiểm tra</button>
+    <script>
+        function NamNhuan() {
+    let a = document.getElementById("year").value;
+    let b = a % 4;
+    let c = a % 100;
+    let d = a % 400;
+    if(b == 0 && c > 0 || d == 0) {
+        result = "Đây là năm nhuận";
+    }else {
+        result = "Đây không phải là năm nhuận";
+    }
+    document.getElementById("btn").innerHTML = result;
+}
+    </script>
+</body>
+</html>
