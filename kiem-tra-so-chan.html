@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhập số</p>
+    <input type="number" id="checkNumber" placeholder="Nhập số cần kiểm tra">
+    <button type="button" onclick="check()">Kiểm tra</button>
+
+    <script>
+        function check() {
+            let a = document.getElementById("checkNumber").value;
+            console.log(a);
+            if ((a % 2) > 0) {
+                result = a + " không phải là số chẵn";
+            } else {
+                result = a + " là số chẵn"
+            }
+            alert(result);
+        }
+        
+    </script>
+</body>
+</html>
